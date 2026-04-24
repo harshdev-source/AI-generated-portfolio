@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Verma — Designer & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BLOBS BACKGROUND -->
+  <div class="blob-canvas" aria-hidden="true">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo" onclick="goTo('home')">HV</div>
+    <div class="nav-links">
+      <button class="nav-link active" onclick="goTo('home')" data-page="home">Home</button>
+      <button class="nav-link" onclick="goTo('about')" data-page="about">About</button>
+      <button class="nav-link" onclick="goTo('projects')" data-page="projects">Projects</button>
+      <button class="nav-link" onclick="goTo('skills')" data-page="skills">Skills</button>
+      <button class="nav-link" onclick="goTo('contact')" data-page="contact">Contact</button>
+      <button class="dark-toggle" id="darkBtn" onclick="toggleDark()" title="Toggle dark mode" aria-label="Toggle dark mode">
+        <span class="toggle-icon" id="toggleIcon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HOME PAGE ══════════════ -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for work
+        </div>
+        <h1 class="hero-title">
+          Creative<br><span class="gradient-text">Designer</span><br>&amp; Developer
+        </h1>
+        <p class="hero-sub">
+          Hi, I'm <strong>Harsh Verma</strong> — I craft beautiful digital experiences
+          where elegant design meets clean, purposeful code.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="goTo('projects')">View My Work</button>
+          <button class="btn-outline" onclick="goTo('contact')">Say Hello ✦</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Projects</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">C++</span><span class="stat-label">Primary Lang</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Curiosity</span></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <!-- 3D MODEL 1: Floating Sphere -->
+        <div class="model-wrap model-hero">
+          <canvas id="canvas-hero" width="340" height="340"></canvas>
+          <div class="model-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE STRIP -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>UI Design</span><span class="dot">✦</span>
+        <span>C++ Dev</span><span class="dot">✦</span>
+        <span>Problem Solving</span><span class="dot">✦</span>
+        <span>Clean Code</span><span class="dot">✦</span>
+        <span>Prototyping</span><span class="dot">✦</span>
+        <span>Web Development</span><span class="dot">✦</span>
+        <span>Creative Thinking</span><span class="dot">✦</span>
+        <span>UI Design</span><span class="dot">✦</span>
+        <span>C++ Dev</span><span class="dot">✦</span>
+        <span>Problem Solving</span><span class="dot">✦</span>
+        <span>Clean Code</span><span class="dot">✦</span>
+        <span>Prototyping</span><span class="dot">✦</span>
+        <span>Web Development</span><span class="dot">✦</span>
+        <span>Creative Thinking</span><span class="dot">✦</span>
+      </div>
+    </div>
+
+    <!-- WHAT I DO SECTION -->
+    <section class="what-section">
+      <div class="section-header">
+        <p class="section-eyebrow">What I Do</p>
+        <h2 class="section-title">Turning ideas into<br><span class="gradient-text">digital reality</span></h2>
+      </div>
+      <div class="what-grid">
+        <div class="what-card">
+          <div class="what-icon" style="background:linear-gradient(135deg,#d4eafc,#b8d9f5);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="14" rx="3" stroke="#378add" stroke-width="1.8"/><path d="M7 17h10M9 20h6" stroke="#378add" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Crafting interfaces that feel intuitive, beautiful, and genuinely enjoyable to use.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon" style="background:linear-gradient(135deg,#f9d0c2,#f4a58a);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 6l-4 6 4 6M16 6l4 6-4 6M13 4l-2 16" stroke="#e8876a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>C++ Development</h3>
+          <p>Writing efficient, well-structured programs that solve real problems with elegance.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon" style="background:linear-gradient(135deg,#ddd6f8,#c4b8f0);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#7f77dd" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="#7f77dd" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Prototyping</h3>
+          <p>Rapid prototyping from rough sketches to interactive, testable mockups.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-icon" style="background:linear-gradient(135deg,#c8e8e2,#a8dfd4);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 5v8l-9 5-9-5V8l9-5z" stroke="#1d9e75" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Problem Solving</h3>
+          <p>Approaching every challenge with curiosity, logic, and creative thinking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D SHOWCASE SECTION -->
+    <section class="showcase-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Featured Work</p>
+        <h2 class="section-title">Projects I'm<br><span class="gradient-text">proud of</span></h2>
+      </div>
+      <div class="showcase-grid">
+        <div class="showcase-card" onclick="goTo('projects')">
+          <div class="showcase-thumb" style="background:linear-gradient(135deg,#d4eafc,#c8e8e2);">
+            <canvas id="canvas-calc" width="180" height="180"></canvas>
+          </div>
+          <div class="showcase-body">
+            <span class="sc-tag" style="background:#d4eafc;color:#185fa5;">C++</span>
+            <h3>Calculator</h3>
+            <p>Feature-rich CLI calculator with full arithmetic support.</p>
+            <span class="sc-arrow">→</span>
+          </div>
+        </div>
+        <div class="showcase-card" onclick="goTo('projects')">
+          <div class="showcase-thumb" style="background:linear-gradient(135deg,#f9d0c2,#ddd6f8);">
+            <canvas id="canvas-age" width="180" height="180"></canvas>
+          </div>
+          <div class="showcase-body">
+            <span class="sc-tag" style="background:#f9d0c2;color:#993c1d;">C++</span>
+            <h3>Age Calculator</h3>
+            <p>Precise date-based age calculation with leap year logic.</p>
+            <span class="sc-arrow">→</span>
+          </div>
+        </div>
+        <div class="showcase-cta">
+          <div class="cta-inner">
+            <canvas id="canvas-cta" width="160" height="160"></canvas>
+            <h3>More coming<br>soon ✦</h3>
+            <p>New projects are in the works. Check back soon!</p>
+            <button class="btn-primary" onclick="goTo('contact')">Collaborate</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Kind Words</p>
+        <h2 class="section-title">What visitors<br><span class="gradient-text">say</span></h2>
+      </div>
+      <div class="reviews-list" id="reviewsList">
+        <div class="reviews-empty">Be the first to leave a review below! ✨</div>
+      </div>
+
+      <!-- Leave a review -->
+      <div class="review-form-wrap">
+        <h3 class="review-form-title">Leave a Review</h3>
+        <div class="review-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label>Your Name</label>
+              <input type="text" id="rv-name" placeholder="e.g. Alex" />
+            </div>
+            <div class="form-field">
+              <label>Email (optional)</label>
+              <input type="email" id="rv-email" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Rating</label>
+            <div class="star-rating" id="starRating">
+              <span class="star" data-v="1">★</span>
+              <span class="star" data-v="2">★</span>
+              <span class="star" data-v="3">★</span>
+              <span class="star" data-v="4">★</span>
+              <span class="star" data-v="5">★</span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Your Review</label>
+            <textarea id="rv-msg" rows="3" placeholder="Share your thoughts about my work..."></textarea>
+          </div>
+          <button class="btn-primary" onclick="submitReview()">Submit Review ✦</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-logo">HV</div>
+        <p class="footer-tagline">Crafting beautiful things — one pixel at a time.</p>
+        <div class="footer-links">
+          <button onclick="goTo('home')">Home</button>
+          <button onclick="goTo('about')">About</button>
+          <button onclick="goTo('projects')">Projects</button>
+          <button onclick="goTo('skills')">Skills</button>
+          <button onclick="goTo('contact')">Contact</button>
+        </div>
+        <div class="footer-copy">
+          <span>© 2025 Harsh Verma. All rights reserved.</span>
+          <span class="footer-heart">Made with ♥ and lots of ☕</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-home -->
+
+  <!-- ══════════════ ABOUT PAGE ══════════════ -->
+  <div class="page" id="page-about">
+    <div class="page-inner">
+      <div class="about-grid">
+        <div class="about-3d">
+          <div class="avatar-wrap">
+            <canvas id="canvas-about" width="300" height="300"></canvas>
+            <div class="about-tag about-tag1">✦ Designer</div>
+            <div class="about-tag about-tag2">{ } Developer</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow">About Me</p>
+          <h2>Hey, I'm Harsh 👋</h2>
+          <p>I'm a Designer &amp; Developer who loves building things that are both beautiful and functional. I blend design thinking with technical skills to create experiences people love.</p>
+          <p>Whether it's a pixel-perfect interface or a well-structured codebase, I care about the craft behind every detail. I enjoy working with C++, web technologies, and modern design tools.</p>
+          <p>When I'm not coding or designing, I'm exploring new technologies and pushing myself to build things I'm genuinely proud of.</p>
+          <div class="about-pills">
+            <span class="pill">UI/UX Design</span>
+            <span class="pill">C++</span>
+            <span class="pill">Web Dev</span>
+            <span class="pill">Prototyping</span>
+            <span class="pill">Problem Solving</span>
+            <span class="pill">Clean Code</span>
+          </div>
+          <button class="btn-primary" style="margin-top:32px;" onclick="goTo('contact')">Let's Work Together</button>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copy"><span>© 2025 Harsh Verma. All rights reserved.</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ══════════════ PROJECTS PAGE ══════════════ -->
+  <div class="page" id="page-projects">
+    <div class="page-inner">
+      <div class="projects-wrap">
+        <p class="section-eyebrow" style="text-align:center;">My Work</p>
+        <h2 class="section-title" style="text-align:center;margin-bottom:16px;">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">A selection of things I've built with care and curiosity.</p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-thumb" style="background:linear-gradient(135deg,#d4eafc,#c8e8e2);">
+              <canvas id="canvas-p1" width="200" height="160"></canvas>
+            </div>
+            <div class="project-body">
+              <span class="project-tag" style="background:#d4eafc;color:#185fa5;">C++ · CLI</span>
+              <div class="project-name">Calculator</div>
+              <div class="project-desc">A feature-rich command-line calculator built in C++. Supports arithmetic operations, parentheses, and handles edge cases gracefully.</div>
+              <div class="project-stack">
+                <span class="stack-chip">C++</span>
+                <span class="stack-chip">CLI</span>
+                <span class="stack-chip">Math Logic</span>
+              </div>
+              <button class="btn-sm">View Project →</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-thumb" style="background:linear-gradient(135deg,#f9d0c2,#ddd6f8);">
+              <canvas id="canvas-p2" width="200" height="160"></canvas>
+            </div>
+            <div class="project-body">
+              <span class="project-tag" style="background:#f9d0c2;color:#993c1d;">C++ · Utility</span>
+              <div class="project-name">Age Calculator</div>
+              <div class="project-desc">An elegant C++ program that calculates exact age — years, months, and days — with leap year precision and clean output.</div>
+              <div class="project-stack">
+                <span class="stack-chip">C++</span>
+                <span class="stack-chip">Date Logic</span>
+                <span class="stack-chip">Algorithms</span>
+              </div>
+              <button class="btn-sm">View Project →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copy"><span>© 2025 Harsh Verma. All rights reserved.</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ══════════════ SKILLS PAGE ══════════════ -->
+  <div class="page" id="page-skills">
+    <div class="page-inner">
+      <div class="skills-wrap">
+        <p class="section-eyebrow" style="text-align:center;">Expertise</p>
+        <h2 class="section-title" style="text-align:center;margin-bottom:16px;">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-sub">Technologies and disciplines I work with.</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon" style="background:linear-gradient(135deg,#d4eafc,#b8d9f5);">💻</div><div class="skill-name">C++</div><div class="skill-level-text">Advanced · 85%</div><div class="skill-bar"><div class="skill-fill" style="width:85%;background:linear-gradient(90deg,#b8d9f5,#378add);"></div></div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:linear-gradient(135deg,#f9d0c2,#f4a58a);">🎨</div><div class="skill-name">UI Design</div><div class="skill-level-text">Proficient · 80%</div><div class="skill-bar"><div class="skill-fill" style="width:80%;background:linear-gradient(90deg,#f4a58a,#e8876a);"></div></div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:linear-gradient(135deg,#ddd6f8,#c4b8f0);">🌐</div><div class="skill-name">Web Dev</div><div class="skill-level-text">Intermediate · 70%</div><div class="skill-bar"><div class="skill-fill" style="width:70%;background:linear-gradient(90deg,#c4b8f0,#7f77dd);"></div></div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:linear-gradient(135deg,#c8e8e2,#a8dfd4);">⚡</div><div class="skill-name">Problem Solving</div><div class="skill-level-text">Advanced · 90%</div><div class="skill-bar"><div class="skill-fill" style="width:90%;background:linear-gradient(90deg,#a8dfd4,#1d9e75);"></div></div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:linear-gradient(135deg,#f9d0c2,#ddd6f8);">✏️</div><div class="skill-name">Prototyping</div><div class="skill-level-text">Proficient · 75%</div><div class="skill-bar"><div class="skill-fill" style="width:75%;background:linear-gradient(90deg,#f4a58a,#c4b8f0);"></div></div></div>
+          <div class="skill-card"><div class="skill-icon" style="background:linear-gradient(135deg,#d4eafc,#c8e8e2);">🔧</div><div class="skill-name">Clean Code</div><div class="skill-level-text">Advanced · 88%</div><div class="skill-bar"><div class="skill-fill" style="width:88%;background:linear-gradient(90deg,#b8d9f5,#a8dfd4);"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copy"><span>© 2025 Harsh Verma. All rights reserved.</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ══════════════ CONTACT PAGE ══════════════ -->
+  <div class="page" id="page-contact">
+    <div class="page-inner">
+      <div class="contact-wrap">
+        <p class="section-eyebrow" style="text-align:center;">Get In Touch</p>
+        <h2 class="section-title" style="text-align:center;margin-bottom:16px;">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-sub">I'd love to hear from you — projects, collabs, or just a hello.</p>
+        <div class="contact-card">
+          <div class="contact-field">
+            <label class="contact-label">Your Name</label>
+            <input class="contact-input" type="text" placeholder="e.g. Alex Johnson" id="c-name"/>
+          </div>
+          <div class="contact-field">
+            <label class="contact-label">Email Address</label>
+            <input class="contact-input" type="email" placeholder="hello@example.com" id="c-email"/>
+          </div>
+          <div class="contact-field">
+            <label class="contact-label">Message</label>
+            <textarea class="contact-input" rows="4" placeholder="Tell me about your project or idea..." id="c-msg"></textarea>
+          </div>
+          <button class="btn-primary" style="width:100%;" onclick="sendMsg()">Send Message ✦</button>
+          <div class="contact-social">
+            <button class="social-btn">GitHub</button>
+            <button class="social-btn">LinkedIn</button>
+            <button class="social-btn">Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copy"><span>© 2025 Harsh Verma. All rights reserved.</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
